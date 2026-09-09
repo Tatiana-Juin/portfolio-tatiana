@@ -14,7 +14,12 @@
     flex-direction: column;
     gap:8px;
     position:relative;
-   
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+     width: 300px;
+    height: 220px;
+    flex: 0 0 300px;
 }
 
 .category{
@@ -34,16 +39,18 @@
     /* text-align: end; */
     
 }
+/* STYLE POUR LE BADGE FRONTEND  */
 .yellow{
     background-color: var(--backgroundYellow);
 }
-
+/* STYLE POUR LE BADGE FULLSTACK */
 .purple{
     background-color: var(--backgroundPurple);
 }
 
 .card h3{
-    font-size:20px;
+    margin-top:30px;
+    font-size:25px;
 }
 
 .card p {
