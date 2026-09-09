@@ -3,6 +3,7 @@ import styles from "./page.module.css"
 import Hero from "@/components/home/Hero";
 import AboutCard from "@/components/home/AboutCard";
 import SocialLinksPanel from "@/components/home/SocialLinksPanel";
+import ProjectsSection from "@/components/projects/ProjectsSection";
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
          <AboutCard />
         <SocialLinksPanel />
       </div>
-      
+      <ProjectsSection />
     </div>
   );
 }

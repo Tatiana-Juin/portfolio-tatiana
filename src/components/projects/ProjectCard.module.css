@@ -1,0 +1,65 @@
+.cardsProjects{
+    display:flex;
+    gap:24px;
+    flex-wrap: wrap;
+}
+
+.card{
+    background-color: var(--background);
+    border:1px solid black;
+    border-radius:12px;
+    padding:24px;
+    flex:1 1 300px;
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+    position:relative;
+   
+}
+
+.category{
+    position:absolute;
+    top:16px;
+    right:16px;
+    border:1px solid black;
+    border-radius:20px;
+    padding:4px 12px;
+    
+}
+
+.category p{
+    font-size:12px;
+    font-weight:bold;
+    text-transform: uppercase;
+    /* text-align: end; */
+    
+}
+.yellow{
+    background-color: var(--backgroundYellow);
+}
+
+.purple{
+    background-color: var(--backgroundPurple);
+}
+
+.card h3{
+    font-size:20px;
+}
+
+.card p {
+    font-size:14px;
+}
+
+.tag ul{
+    display: flex;
+    gap:8px;
+    list-style:none;
+    flex-wrap:wrap;
+}
+
+.tag li{
+    border-radius:6px;
+    padding:4px 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
