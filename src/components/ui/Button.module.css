@@ -1,0 +1,22 @@
+.button{
+    border-radius: 15px;
+  
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+.light{
+    background-color: var(--background);
+    border:1px solid black;
+    color:black;
+    padding:23px 100px;
+}
+
+.dark{
+    background-color: black;
+    border:1px solid black;
+    color: white;
+      padding:8px 16px;
+}

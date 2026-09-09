@@ -1,0 +1,16 @@
+.aboutCard{
+    width:50vw;
+    /* height:20vh; */
+    border: 1px solid black;
+    margin:0 15px 15px 15px;
+    padding:30px;
+    background-color: var(--backgroundPurple);
+    border-radius: 15px;
+}
+
+.substitle{
+    
+    margin-bottom:15px;
+}
+
+
