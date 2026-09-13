@@ -2,14 +2,17 @@
     display: flex;
     padding: 15px;
     width: 100vw;
-    
     justify-content: space-between;
+    /* ajout */
+    align-items: center;
 }
 .footer{
     border-top:2px solid black;
 }
 .navbar{
     border-bottom:4px solid black;
+    /* ajout */
+    position: relative;
 }
 
 .navbar a ,.links a,.linkSocial a {
@@ -24,4 +27,37 @@
 /* STYLE DU LOGO */
 .logo{
     font-family: var(--fontTitle);
+}
+
+.burger{
+    display: none;
+    background: none;
+    border:none;
+    font-size: 28px;
+    cursor:pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+    .burger{
+        display: block;
+    }
+    .links{
+        display: none;
+        position: absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background-color: var(--background);
+        flex-direction: column;
+        padding: 15px;
+        border-bottom:2px solid black;
+    }
+    .linksOuvert{
+        display: flex;
+    }
+    .links a{
+        margin-right: 0;
+        padding: 10px 0;
+    }
 }
