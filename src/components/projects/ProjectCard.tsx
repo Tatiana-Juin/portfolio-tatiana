@@ -1,5 +1,6 @@
 import {projectFinale} from "../../data/projects"
 import styles from "./ProjectCard.module.css"
+import Button from "../ui/Button"
 export default function ProjectCard() {
   return (
     <div className={styles.cardsProjects}>
@@ -16,6 +17,22 @@ export default function ProjectCard() {
                             <li key={t}> {t} </li>
                         ))}
                     </ul>
+                </div>
+                {/* pour les liens  */}
+                <div className={styles.linkS}>
+                    <Button href={projet.urlGithub} variant="dark">
+                        Github
+                    </Button>
+
+                    {/* Si il a une demo */}
+                    {projet.urlOnline ?(
+                        <a href={projet.urlOnline} target="_blanck" rel="noopener noreferrer" className={styles.live} >
+                            Live
+                        </a>
+                    ):(
+                        <span className={styles.banckendOnly}> Pas de version en ligne</span>
+                    )}
+
                 </div>
                 
             </div>

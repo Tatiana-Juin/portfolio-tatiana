@@ -13,6 +13,7 @@ export default function Home() {
          <AboutCard />
         <SocialLinksPanel />
       </div>
+      
       <ProjectsSection />
     </div>
   );
