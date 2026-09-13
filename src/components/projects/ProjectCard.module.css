@@ -9,17 +9,16 @@
     border:1px solid black;
     border-radius:12px;
     padding:24px;
-    flex:1 1 300px;
+    /* flex:1 1 300px; */
     display: flex;
     flex-direction: column;
     gap:8px;
     position:relative;
     margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
      width: 300px;
     height: 220px;
     flex: 0 0 300px;
+    box-shadow: var(--shadow-hard);
 }
 
 .category{
@@ -49,23 +48,29 @@
 }
 
 .card h3{
-    margin-top:30px;
+    /* margin-top:30px; */
     font-size:25px;
+    color:#444;
+    line-height: 1.4;;
 }
 
 .card p {
-    font-size:14px;
+    font-size:16px;
 }
-
+/* .tag{
+     margin-top: auto;
+} */
 .tag ul{
     display: flex;
     gap:8px;
     list-style:none;
     flex-wrap:wrap;
+   
 }
 
 .tag li{
     border-radius:6px;
+    border:1px solid black;
     padding:4px 10px;
     font-size: 12px;
     font-weight: bold;
