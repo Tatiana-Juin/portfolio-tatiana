@@ -1,12 +1,13 @@
+// nom des langages
 export interface TechItem{
     id:number,
     name:string
 }
-
-export interface TechCategory{
+// pour la category
+ export interface TechCategory{
     id:number,
     title:string,
-    color:"purple" | "pink" | "blue",
+    color:"purple" | "pink" | "blue" |"white",
     items:TechItem[]
 }
 

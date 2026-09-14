@@ -1,0 +1,30 @@
+.block{
+    border:1px solid black;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: var(--shadow-hard);
+    margin-bottom:24px;
+}
+
+.title{
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom: 20px;
+}
+
+.badgeList{
+    display: flex;
+    flex-wrap: wrap;
+    gap:12px;
+}
+
+.purple{
+    background-color: var(--backgroundPurple);
+}
+
+.pink{
+    background-color: var(--backgroundPink);
+}
+.blue{
+    background-color: var(--backgroundBlue);
+}
