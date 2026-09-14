@@ -26,7 +26,7 @@ export default function ProjectCard() {
 
                     {/* Si il a une demo */}
                     {projet.urlOnline ?(
-                        <a href={projet.urlOnline} target="_blanck" rel="noopener noreferrer" className={styles.live} >
+                        <a href={projet.urlOnline} target="_blank" rel="noopener noreferrer" className={styles.live} >
                             Live
                         </a>
                     ):(

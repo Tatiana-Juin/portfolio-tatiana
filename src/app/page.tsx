@@ -1,4 +1,3 @@
-
 import styles from "./page.module.css"
 import Hero from "@/components/home/Hero";
 import AboutCard from "@/components/home/AboutCard";
@@ -13,7 +12,6 @@ export default function Home() {
          <AboutCard />
         <SocialLinksPanel />
       </div>
-      
       <ProjectsSection />
     </div>
   );

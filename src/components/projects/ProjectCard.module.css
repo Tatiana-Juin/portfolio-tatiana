@@ -2,6 +2,7 @@
     display:flex;
     gap:24px;
     flex-wrap: wrap;
+   /* justify-content: center; */
 }
 
 .card{
@@ -94,4 +95,19 @@
     color:#999;
     font-size: 14px;
     font-size:italic;
+}
+
+@media (max-width:700px){
+    .cardsProjects{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card{
+        width:100%;
+        max-width: 340px;
+        flex:0 0 auto;
+        height:auto;
+        min-height:270px;
+    }
 }

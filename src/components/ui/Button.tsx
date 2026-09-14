@@ -10,7 +10,7 @@ export default function Button({href,children,variant="light"}:ButtonProps) {
   return (
     <a 
     href={href}
-    target="__blanck"
+    target="_blank"
     // pour eviter qu'il est window.opener un site ne fait jamais ca sauf un site malveillant 
     rel="noopener noreferrer"
     className={`${styles.button} ${styles[variant]}`}
