@@ -22,7 +22,7 @@ export const termEscape : Project={
 export const components : Project={
     id:2,
     name:"Components",
-    description:"C'est un site qui permet de générer des composant que tu peux modifier . A la fi, tu peux récupérer le code HTML et CSS facilement",
+    description:"Site permettant de generer des composant modificable dont tu peux recuperer le code HTML et CSS pour l'integrer à tes projets.",
     category:"frontend",
     tag:["REACT","TAILWIND CSS"],
     urlGithub:"#",

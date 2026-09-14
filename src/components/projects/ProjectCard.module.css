@@ -2,25 +2,23 @@
     display:flex;
     gap:24px;
     flex-wrap: wrap;
-   /* justify-content: center; */
+   
 }
 
 .card{
     background-color: var(--background);
     border:1px solid black;
     border-radius:12px;
-    padding:24px;
-    /* flex:1 1 300px; */
+    padding:28px;
     display: flex;
     flex-direction: column;
-    gap:8px;
+    gap:12px;
     position:relative;
     margin-bottom: 20px;
-     width: 300px;
-    height: 270px;
-    flex: 0 0 300px;
+    height:320px;
+    flex: 0 0 400px;
     box-shadow: var(--shadow-hard);
-     justify-content: space-between;
+    justify-content: space-between;
 }
 
 .category{
@@ -34,11 +32,9 @@
 }
 
 .category p{
-    font-size:12px;
+    font-size:13px;
     font-weight:bold;
     text-transform: uppercase;
-    /* text-align: end; */
-    
 }
 /* STYLE POUR LE BADGE FRONTEND  */
 .yellow{
@@ -50,14 +46,14 @@
 }
 
 .card h3{
-    /* margin-top:30px; */
+    margin-top:30px;
     font-size:25px;
     color:#444;
     line-height: 1.4;;
 }
 
 .card p {
-    font-size:16px;
+    font-size:18px;
 }
 /* .tag{
      margin-top: auto;
@@ -74,7 +70,7 @@
     border-radius:6px;
     border:1px solid black;
     padding:4px 10px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
 }
 .linkS{
@@ -86,14 +82,14 @@
 
 .live{
     color:black;
-    font-size:14px;
+    font-size:16px;
     font-weight:bold;
     text-decoration: underline;
 }
 
 .backendOnly{
     color:#999;
-    font-size: 14px;
+    font-size: 16px;
     font-size:italic;
 }
 
