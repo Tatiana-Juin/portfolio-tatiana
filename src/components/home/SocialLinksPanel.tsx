@@ -14,7 +14,7 @@ const github : linkSocial = {
 
 const linkedin : linkSocial = {
   id: 2,
-  name:"linkedin",
+  name:"LinkedIn",
   url :"https://www.linkedin.com/in/tatiana-juin/"
 }
 

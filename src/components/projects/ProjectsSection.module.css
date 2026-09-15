@@ -2,9 +2,11 @@
     /* padding:64px 32px; */
     display: flex;
     flex-direction: column;
-   
+   /* border-top: 1px solid black;
+   border-bottom: 1px solid black; */
     padding:64px 8%;
     /* gap: 15px; */
+    /* background-color: var(--backgroundPink); */
 }
 .title{
     font-family: var(--fontTitle);
@@ -13,7 +15,7 @@
 }
 .subtitle{
     font-size:16px;
-    color:#555;
+    /* color:#555; */
     margin-bottom:32px;
 }
 
@@ -25,7 +27,7 @@
     }
 
     .title{
-        font-size:36px;
+        font-size:40px;
     }
 }
 
@@ -35,7 +37,7 @@
          align-items: center;
     }
     .title{
-        font-size: 28px;
+        font-size: 45px;
     }
 
     .subtitle{
