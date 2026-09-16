@@ -8,7 +8,10 @@ import TechStackSection from "@/components/tech-stack/TechStackSection";
 export default function Home() {
   return (
     <div>
-      <Hero />
+      <div className={styles.hero}>
+          <Hero />
+      </div>
+      
       <div className={styles.aboutRow}>
          <AboutCard />
         <SocialLinksPanel />
