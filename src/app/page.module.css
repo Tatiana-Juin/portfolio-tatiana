@@ -1,17 +1,16 @@
-.aboutRow{
+.aboutRow {
   display: flex;
-  gap:16px;
+  gap: 16px;
   align-items: stretch;
-   padding: 1px 8%;
-}
-.hero{
-   padding: 43px 8% ;
+  /* padding: 1px 8%; */
+  margin: 20px 8%;
 }
 
-@media (max-width:768px){
-  .aboutRow{
+
+@media (max-width:768px) {
+  .aboutRow {
     flex-direction: column;
     align-items: center;
+    margin: 16px 5%;
   }
-} 
-  
+}

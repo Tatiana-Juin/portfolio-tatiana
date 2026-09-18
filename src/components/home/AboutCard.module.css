@@ -9,8 +9,13 @@
     box-shadow: var(--shadow-hard);
 }
 
+.description{
+    font-size: 18px;
+}
+
 .substitle{
     margin-bottom:15px;
+    
 }
 
 @media (max-width:768px){

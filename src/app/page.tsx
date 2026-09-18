@@ -9,11 +9,11 @@ export default function Home() {
   return (
     <div>
       <div className={styles.hero}>
-          <Hero />
+        <Hero />
       </div>
-      
+
       <div className={styles.aboutRow}>
-         <AboutCard />
+        <AboutCard />
         <SocialLinksPanel />
       </div>
       <ProjectsSection />

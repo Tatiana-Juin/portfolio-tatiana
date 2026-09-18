@@ -3,6 +3,8 @@
     flex-direction: column;
     gap:12px;
     margin-bottom:10px;
+    /* flex: 1;
+    align-items: flex-end; */
 }
 
 @media (max-width:768px){
