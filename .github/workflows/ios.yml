@@ -4,7 +4,8 @@ name: Build iOS IPA
 on:
   workflow_dispatch:
   push:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
   build:
@@ -29,6 +30,44 @@ jobs:
       - name: Vérifier le dossier exporté
         run: test -d out
 
-      - name: Vérifier la présence du projet iOS
-        run: test -d ios
+      - name: Créer le projet iOS
+        run: npx cap add ios
 
+      - name: Synchroniser Capacitor
+        run: npx cap sync ios
+
+      - name: Installer CocoaPods
+        run: |
+          cd ios/App
+          pod install
+
+      - name: Compiler l'application iOS
+        run: |
+          xcodebuild \
+            -workspace ios/App/App.xcworkspace \
+            -scheme App \
+            -configuration Release \
+            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO \
+            build
+
+      - name: Préparer le dossier IPA
+        run: mkdir -p artifacts
+
+      - name: Exporter l'application IPA
+        run: |
+          APP_PATH="build/Build/Products/Release-iphoneos/App.app"
+          mkdir -p artifacts/Payload
+          cp -R "$APP_PATH" artifacts/Payload/
+          cd artifacts
+          zip -r portfolio.ipa Payload
+
+      - name: Publier le fichier IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-ipa
+          path: artifacts/portfolio.ipa
+          if-no-files-found: error
+          retention-days: 7
