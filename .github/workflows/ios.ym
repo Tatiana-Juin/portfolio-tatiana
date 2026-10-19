@@ -1,0 +1,33 @@
+
+name: Build iOS IPA
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v4
+
+      - name: Installer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Installer les dépendances
+        run: npm install
+
+      - name: Compiler Next.js
+        run: npm run build
+
+      - name: Vérifier le dossier exporté
+        run: test -d out
+
+      - name: Vérifier la présence du projet iOS
+        run: test -d ios
