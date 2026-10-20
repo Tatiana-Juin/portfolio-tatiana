@@ -1,0 +1,73 @@
+
+name: Build iOS IPA
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v4
+
+      - name: Installer Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Installer les dépendances
+        run: npm install
+
+      - name: Compiler Next.js
+        run: npm run build
+
+      - name: Vérifier le dossier exporté
+        run: test -d out
+
+      - name: Créer le projet iOS
+        run: npx cap add ios
+
+      - name: Synchroniser Capacitor
+        run: npx cap sync ios
+
+      - name: Installer CocoaPods
+        run: |
+          cd ios/App
+          pod install
+
+      - name: Compiler l'application iOS
+        run: |
+          xcodebuild \
+            -workspace ios/App/App.xcworkspace \
+            -scheme App \
+            -configuration Release \
+            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath build \
+            CODE_SIGNING_ALLOWED=NO \
+            build
+
+      - name: Préparer le dossier IPA
+        run: mkdir -p artifacts
+
+      - name: Exporter l'application IPA
+        run: |
+          APP_PATH="build/Build/Products/Release-iphoneos/App.app"
+          mkdir -p artifacts/Payload
+          cp -R "$APP_PATH" artifacts/Payload/
+          cd artifacts
+          zip -r portfolio.ipa Payload
+
+      - name: Publier le fichier IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-ipa
+          path: artifacts/portfolio.ipa
+          if-no-files-found: error
+          retention-days: 7
